@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/tree-838667_1280.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Search Box   -->
+
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="city-name"  type="text" class="form-control" placeholder="Enter city name to get weather update...">
+
+                <div class="input-group-append">
+                    <button onclick= "searchTemperature()" type="button" class="btn btn-info">Search</button>
+                </div>
+            </div>
+        </form>
+
+          
+        <!-- Display Information  -->
+
+        <div class="weather-status text-white text-center">
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="location">City</h1>
+            <h3><span id="temperature">0</span>&deg;C</h3>
+            <h1 class="lead">  <i class="fas fa-wind"> </i> <span id="wind-speed">   </span>  </h1>
+            <h1 id="weather-condition" class="lead">Clouds</h1>
+        </div>
+    </div>
+ 
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/c11e21a722.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
