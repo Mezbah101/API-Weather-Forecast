@@ -3,13 +3,21 @@ const API_KEY = `8fc962c29eb10f74fb026b5ce0a57cb4`
 const searchTemperature = () => {
    
      const city = document.getElementById("city-name").value ;
-     document.getElementById("city-name").value = "";
-     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-    
-    fetch (url)
-    .then (res => res.json())
-    .then (data => displayInfo(data))
 
+     if (!city) {
+       
+        document.getElementById("location").innerText = "Please Enter City";
+     }
+    else {
+
+      document.getElementById("city-name").value = "";
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+     
+     fetch (url)
+     .then (res => res.json())
+     .then (data => displayInfo(data))
+ 
+    }
 }
 
 
